@@ -56,8 +56,8 @@
 	height: 27px;
 	width: 27px;
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 8px;
+	right: 14px;
 	background-color: transparent;
 	background-position: -3px -4px;
 	border: none;
@@ -69,6 +69,9 @@
 	ul {
 		font-size: 0;
 		text-align: justify;
+		margin: 2px 0 0 0;
+		line-height: 0;
+		padding: 0;
 		&:after {
 			content: " ";
 			display: inline-block;
@@ -78,11 +81,32 @@
 			display: inline-block;
 			vertical-align: middle;
 			font-size: 18px;
+			line-height: 1em;
+		}
+		.active {
+			font-weight: 700;
+			a {
+				border-bottom-color: #659691;
+			}
 		}
 		a {
 			color: #191b20;
 			text-decoration: none;
+			display: block;
+			padding: 23px 40px;
+			border-bottom: 4px solid transparent;
 		}
+	}
+}
+
+@media (max-width: 1040px) {
+	.main-nav ul li a {
+		padding: 23px 20px;
+	}
+}
+@media (max-width: 991px) {
+	.main-nav ul li a {
+		padding: 23px 14px;
 	}
 }
 
@@ -104,7 +128,6 @@
 	    border-radius: none;
 	    border: none;
 	    box-shadow: none;
-	    float: right;
 	    cursor: pointer;
 	    display: block;
 	    font-size: 16px;
@@ -112,11 +135,14 @@
 	    margin: 0;
 	    overflow: hidden;
 	    padding: 0;
-	    position: relative;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
 	    text-indent: -9999 * @em16;
 	    width: 63 * @em16;
+	    z-index: 3;
 	    &:hover, &:active {
-			background: #2c2c2c - 20%;
+			background: #f5f5f5 - 20%;
 		}
 	}
 	.button-menu:focus {
@@ -124,7 +150,7 @@
 	}
 	.button-menu span {
 	    display: block;
-	    background: #f1f2f2;
+	    background: #000;
 	    height: 2px;
 	    left: 20 * @em16;
 	    position: absolute;
@@ -135,7 +161,7 @@
 	}
 	.button-menu span:before,
 	.button-menu span:after {
-	    background-color: #f1f2f2;
+	    background-color: #000;
 	    content: "";
 	    display: block;
 	    height: 2px;
@@ -176,5 +202,49 @@
 	    transition-delay: 0s, 0.3s
 	}
 	/* END button menu */
+	.main-header {
+		padding: 10px 0;
+	}
+	.logo {
+		float: none;
+		margin: 0 auto 10px;
+		width: 145px;
+		position: relative;
+		z-index: 3;
+	}
+	.search {
+		float: none;
+		margin: 0;
+		width: 100%;
+	}
 
+	.main-nav {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 2;
+		background: #f5f5f5;
+		overflow: auto;
+		padding-top: 130px;
+		display: none;
+		ul {
+			&:after {
+				display: none;
+			}
+			li {
+				float: none;
+				display: block;
+			}
+		}
+	}
+	.main-nav ul li a {
+		padding: 10px 15px;
+		border: none;
+		text-align: center;
+	}
+	.button-menu.open-nav + .main-nav {
+		display: block;
+	}
 }
