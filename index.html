@@ -17,7 +17,8 @@
 				<img src="images/logo.png" alt="logo">
 			</a>
 			<form class="search">
-				<input type="text" class="form-control-search">
+				<label for="search" class="hidden">Search</label>
+				<input type="text" class="form-control-search" id="search">
 				<button type="submit" class="buttom-search"></button>
 			</form>
 		</div>
@@ -67,15 +68,15 @@
 				<button type="submit" class="btn">חפש</button>
 			</div>
 			<div class="col-lg-2 col-sm-3">
-				<label>התחלת הקורס</label>
+				<label for="datepicker">התחלת הקורס</label>
 				<div class="datepicker-wrap">
-					<input type="text" value="12.11.2016" class="form-control datepicker">
+					<input class="datepicker" type="text" value="12.11.2016" class="form-control datepicker">
 				</div>
 			</div>
 			<div class="col-lg-4 col-sm-3">
-				<label>שעות גמו”ש</label>
+				<label for="select1">שעות גמו”ש</label>
 				<div class="form-control">
-					<select class="select-style">
+					<select class="select-style" id="select1">
 						<option>מספר שעות</option>
 						<option>מספר שעות1</option>
 						<option>מספר שעות2</option>
@@ -84,9 +85,9 @@
 				</div>
 			</div>
 			<div class="col-lg-4 col-sm-3">
-				<label>קטגוריה</label>
+				<label for="select2">קטגוריה</label>
 				<div class="form-control">
-					<select class="select-style">
+					<select class="select-style" id="select2">
 						<option>ניהול עסקים</option>
 						<option>ניהול עסקים1</option>
 						<option>ניהול עסקים2</option>
