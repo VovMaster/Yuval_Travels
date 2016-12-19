@@ -1,20 +1,9 @@
 .wrap-lists{
-	padding: 35px 0 46px;
+	padding-top: 35px;
+	padding-bottom: 30px;
 }
 .list-style{
-	letter-spacing: 0.025em;
-	&.orange{
-		border: 2px solid #f99c1c;
-		.list-style-title{
-			background-color: #f99c1c;
-		}
-	}
-	&.turquoise{
-		border: 2px solid #00b6b5;
-		.list-style-title{
-			background-color: #00b6b5;
-		}
-	}
+	margin-bottom: 16px;
 	ul{
 		list-style: none;
 		padding-right: 0;
@@ -23,33 +12,44 @@
 	li{
 		border-bottom: 1px solid #ccd4dc;
 		overflow: hidden;
-		padding: 0 20px 0 10px;
+		padding: 13.5px 20px 13.5px 10px;
+		color: #191b20;
+		font-size: 14px;
 		&:last-child{
 			border-bottom: none;
 		}
 	}
 	a{
 		color: #191b20;
-		font-size: 14px;
 		display: block;
-		padding: 13.5px 0;
-		img{
-			margin: auto;
-			display: inline-block;
-		}
+	}
+}
+.list-style-orange{
+	border: 2px solid #f99c1c;
+	.list-style-title{
+		background-color: #f99c1c;
+	}
+}
+.list-style-turquoise{
+	border: 2px solid #00b6b5;
+	.list-style-title{
+		background-color: #00b6b5;
 	}
 }
 .wrap-icon{
 	float: right;
 	width: 38px;
-	margin-top: -5px;
+	margin: -5px 0 -10px;
+	img{
+		margin: auto;
+		display: inline-block;
+	}
 }
 .list-style-title{
 	font-size: 28px;
 	color: #191b20;
 	line-height: 28px;
 	padding: 7px 21px 9px;
-	letter-spacing: 0.025em;
 }
 .list-style-md{
 	ul{
@@ -61,4 +61,77 @@
 }
 .text-margin{
 	margin-right: 38px;
+}
+
+
+.section-style{
+	background-color: #e3e3e3;
+	padding: 21px 0 0;
+}
+.block-style{
+	color: #00181d;
+	text-align: center;
+	margin-top: 31px;
+	display: block;
+}
+.block-style-text{
+	padding: 0 35px;
+	font-size: 0;
+	&:after{
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		height: 46px;
+	}
+	> div{
+		display: inline-block;
+		vertical-align: middle;
+		width: 100%;
+		font-size: 16px;
+	}
+}
+.turquoise{
+	background-color: #00b6b5;
+}
+.lime{
+	background-color: #bfd730;
+}
+.orange{
+	background-color: #f99c1c;
+}
+.red{
+	background-color: #f36f20;
+}
+.title{
+	font-size: 28px;
+	margin-bottom: 13px;
+	color: #191b20;
+}
+.line{
+	background-color: #659691;
+	height: 2px;
+}
+.pagination{
+	text-align: center;
+	padding-top: 44px;
+	ul{
+		list-style: none;
+		padding: 0;
+		display: inline-block;
+	}
+	li{
+		float: left;
+		a{
+			font-size: 18px;
+			color: #191b20;
+			padding: 0 4px;
+		}
+		&.active{
+			a{
+				color: #ffffff;
+				background-color: #191b20;
+			}		
+		}
+	}
+	
 }
