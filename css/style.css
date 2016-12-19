@@ -1254,7 +1254,7 @@ html {
 }
 body {
   font-size: 1rem;
-  line-height: 1.2857;
+  line-height: 1em;
   color: #666666;
   font-family: 'Open Sans Hebrew', sans-serif;
   font-weight: normal;
