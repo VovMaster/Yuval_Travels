@@ -66,7 +66,7 @@
 
 .section-style{
 	background-color: #e3e3e3;
-	padding: 21px 0 0;
+	padding: 21px 0 38px;
 }
 .block-style{
 	color: #00181d;
@@ -76,8 +76,9 @@
 	&:hover {
 		color: #fff;
 		text-decoration: none;
-	}
-}
+	}	img{
+		width: 100%;
+	}}
 .block-style-text{
 	padding: 0 35px;
 	font-size: 0;
@@ -117,18 +118,21 @@
 }
 .pagination{
 	text-align: center;
-	padding-top: 44px;
+	padding-top: 38px;
 	ul{
 		list-style: none;
 		padding: 0;
 		display: inline-block;
+		margin: 0;
 	}
 	li{
 		float: left;
+		margin: 0 6px;
 		a{
 			font-size: 18px;
 			color: #191b20;
-			padding: 0 4px;
+			padding: 2px 4px;
+			display: block;
 		}
 		&.active{
 			a{
@@ -136,6 +140,19 @@
 				background-color: #191b20;
 			}		
 		}
+	}
+	.prev, .next{
+		background-image: url(../images/sprite.png);
+		width: 8px;
+		height: 13px;
+		background-repeat: no-repeat;
+		margin: 4px 0;
+	}
+	.prev{
+		background-position: -103px -13px;
+	}
+	.next{
+		background-position: -121px -13px;
 	}
 	
 }
