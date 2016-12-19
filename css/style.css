@@ -53,6 +53,16 @@
 * Copyright jQuery Foundation and other contributors; Licensed MIT */
 /* Layout helpers
 ----------------------------------*/
+.ui-datepicker,
+.ui-datepicker:after,
+.ui-datepicker:before,
+.ui-datepicker > *,
+.ui-datepicker > *:after,
+.ui-datepicker > *:before {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
 .ui-helper-hidden {
   display: none;
 }
@@ -481,31 +491,31 @@ a.ui-button:active,
 }
 .ui-icon,
 .ui-widget-content .ui-icon {
-  background-image: url("images/ui-icons_444444_256x240.png");
+  background-image: url("../images/ui-icons_444444_256x240.png");
 }
 .ui-widget-header .ui-icon {
-  background-image: url("images/ui-icons_444444_256x240.png");
+  background-image: url("../images/ui-icons_444444_256x240.png");
 }
 .ui-state-hover .ui-icon,
 .ui-state-focus .ui-icon,
 .ui-button:hover .ui-icon,
 .ui-button:focus .ui-icon {
-  background-image: url("images/ui-icons_555555_256x240.png");
+  background-image: url("../images/ui-icons_555555_256x240.png");
 }
 .ui-state-active .ui-icon,
 .ui-button:active .ui-icon {
-  background-image: url("images/ui-icons_ffffff_256x240.png");
+  background-image: url("../images/ui-icons_ffffff_256x240.png");
 }
 .ui-state-highlight .ui-icon,
 .ui-button .ui-state-highlight.ui-icon {
-  background-image: url("images/ui-icons_777620_256x240.png");
+  background-image: url("../images/ui-icons_777620_256x240.png");
 }
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon {
-  background-image: url("images/ui-icons_cc0000_256x240.png");
+  background-image: url("../images/ui-icons_cc0000_256x240.png");
 }
 .ui-button .ui-icon {
-  background-image: url("images/ui-icons_777777_256x240.png");
+  background-image: url("../images/ui-icons_777777_256x240.png");
 }
 /* positioning */
 .ui-icon-blank {
@@ -2370,6 +2380,132 @@ h6,
   outline: 0;
   background-color: #01435c;
   border-radius: 4px;
+}
+.select-style {
+  display: none;
+}
+.form-filter-wrap {
+  background: #191b20;
+  padding-top: 37px;
+  padding-bottom: 37px;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: 46px;
+  padding: 6px 20px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #191b20;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #fff;
+  border-radius: 0;
+  font-family: "OpenSansHebrew";
+  font-weight: 400;
+}
+.form-control .ik_select {
+  margin: -7px -20px;
+  display: block;
+  border-radius: 0;
+}
+.form-control .ik_select_link {
+  line-height: 32px;
+  height: 46px;
+  border: 1px solid #fff;
+  box-shadow: none;
+  font-family: "OpenSansHebrew";
+  font-size: 18px;
+  color: #191b20;
+  padding: 6px 20px;
+  font-weight: normal;
+  position: relative;
+  border-radius: 0;
+}
+.form-control .ik_select_link_text {
+  direction: rtl;
+  text-align: right;
+}
+.form-control .ik_select_link::after {
+  background-image: url("../images/sprite.png");
+  background-position: -78px -13px;
+  border: medium none;
+  height: 14px;
+  left: 12px;
+  content: " ";
+  position: absolute;
+  right: auto;
+  top: 28px;
+  width: 19px;
+}
+.form-control .ik_select_link_text::after {
+  display: none;
+}
+.form-control:focus {
+  border-color: #b9a777;
+  outline: 0;
+  -moz-box-shadow: 0 0 6px #ceb296;
+  -webkit-box-shadow: 0 0 6px #ceb296;
+  box-shadow: 0 0 6px #ceb296;
+}
+.form-control:focus + .icon {
+  color: #01435c;
+}
+.form-control::-moz-placeholder {
+  color: #c1c1c1;
+  opacity: 1;
+  font-size: 12px;
+}
+.form-control:-ms-input-placeholder {
+  color: #c1c1c1;
+}
+.form-control::-webkit-input-placeholder {
+  color: #c1c1c1;
+}
+.form-control::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+.datepicker-wrap {
+  position: relative;
+}
+.datepicker-wrap:after {
+  background-image: url("../images/sprite.png");
+  background-position: -46px -6px;
+  content: " ";
+  height: 24px;
+  left: 12px;
+  position: absolute;
+  top: 10px;
+  width: 24px;
+}
+.btn {
+  display: block;
+  font-family: "OpenSansHebrew";
+  font-weight: normal;
+  background: #00b6b5;
+  font-size: 18px;
+  color: #191b20;
+  width: 100%;
+  border-radius: 0;
+  height: 46px;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn.focus:active,
+.btn.active.focus,
+.btn:hover {
+  background: #f99c1c;
+  border-radius: 0;
+}
+.form-filter label {
+  color: #f5f5f5;
+  font-size: 16px;
+  font-weight: normal;
+  min-height: 23px;
+  display: block;
 }
 p,
 ul,
