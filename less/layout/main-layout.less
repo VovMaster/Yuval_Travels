@@ -1,4 +1,8 @@
+.wrap-lists{
+	padding: 35px 0 46px;
+}
 .list-style{
+	letter-spacing: 0.025em;
 	&.orange{
 		border: 2px solid #f99c1c;
 		.list-style-title{
@@ -14,9 +18,12 @@
 	ul{
 		list-style: none;
 		padding-right: 0;
+		margin: 2px 0;
 	}
 	li{
 		border-bottom: 1px solid #ccd4dc;
+		overflow: hidden;
+		padding: 0 20px 0 10px;
 		&:last-child{
 			border-bottom: none;
 		}
@@ -24,12 +31,34 @@
 	a{
 		color: #191b20;
 		font-size: 14px;
+		display: block;
+		padding: 13.5px 0;
 		img{
-			float: right;
+			margin: auto;
+			display: inline-block;
 		}
 	}
+}
+.wrap-icon{
+	float: right;
+	width: 38px;
+	margin-top: -5px;
 }
 .list-style-title{
 	font-size: 28px;
 	color: #191b20;
+	line-height: 28px;
+	padding: 7px 21px 9px;
+	letter-spacing: 0.025em;
+}
+.list-style-md{
+	ul{
+		margin: 3px 0 2px;
+	}
+	a{
+		font-size: 16px;
+	}
+}
+.text-margin{
+	margin-right: 38px;
 }
