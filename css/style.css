@@ -3025,18 +3025,18 @@ img {
   color: #ffffff;
   background-color: #191b20;
 }
-.pagination .prev,
-.pagination .next {
+.pagination .prev a,
+.pagination .next a {
   background-image: url(../images/sprite.png);
   width: 8px;
   height: 13px;
   background-repeat: no-repeat;
   margin: 4px 0;
 }
-.pagination .prev {
+.pagination .prev a {
   background-position: -103px -13px;
 }
-.pagination .next {
+.pagination .next a {
   background-position: -121px -13px;
 }
 .main-footer {
