@@ -1,0 +1,35 @@
+.list-style{
+	&.orange{
+		border: 2px solid #f99c1c;
+		.list-style-title{
+			background-color: #f99c1c;
+		}
+	}
+	&.turquoise{
+		border: 2px solid #00b6b5;
+		.list-style-title{
+			background-color: #00b6b5;
+		}
+	}
+	ul{
+		list-style: none;
+		padding-right: 0;
+	}
+	li{
+		border-bottom: 1px solid #ccd4dc;
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+	a{
+		color: #191b20;
+		font-size: 14px;
+		img{
+			float: right;
+		}
+	}
+}
+.list-style-title{
+	font-size: 28px;
+	color: #191b20;
+}
