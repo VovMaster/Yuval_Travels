@@ -133,30 +133,39 @@
 			color: #191b20;
 			padding: 2px 4px;
 			display: block;
+			text-decoration: none;
 		}
-		&.active{
+		&.active, &:not(.prev):not(.next):hover{
 			a{
 				color: #ffffff;
 				background-color: #191b20;
+				text-decoration: none;
 			}		
 		}
 	}
 	.prev, .next{
 		a{
-			background-image: url(../images/sprite.png);
-			width: 8px;
-			height: 13px;
-			background-repeat: no-repeat;
-			margin: 4px 0;
+			display: block;
+			margin: -1px -4px;
+			padding: 2px 5px;
+			&:after {
+				background-image: url(../images/sprite.png);
+				width: 8px;
+				height: 13px;
+				background-repeat: no-repeat;
+				margin: 4px 0;
+				display: block;
+				content: " ";
+			}
 		}
 	}
 	.prev{
-		a{
+		a:after{
 			background-position: -103px -13px;
 		}
 	}
 	.next{
-		a{
+		a:after{
 			background-position: -121px -13px;
 		}
 	}
